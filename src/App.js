@@ -15,6 +15,7 @@ class App extends Component {
       codeReader.getVideoInputDevices().then(videoInputDevices => {
 
       const firstDeviceId = videoInputDevices[0].deviceId;
+      
       codeReader.decodeFromInputVideoDevice(firstDeviceId, 'video')
       .then(result => {
             let res = result.text;
@@ -29,12 +30,13 @@ class App extends Component {
                   if(data.value)
                     window.location.href = res;
               });
-            }else
+            }else{
                 alert(result.text);
-            
+                this.cameraScanner();
+            }
       }).catch(err => console.error(err));
     }).catch(err => console.error(err));
-  }
+  } 
 
   render() {
     return (
