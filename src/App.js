@@ -30,10 +30,9 @@ class App extends Component {
                   if(data.value)
                     window.location.href = res;
               });
-            }else{
+            }else
                 alert(result.text);
-                this.cameraScanner();
-            }
+        
       }).catch(err => console.error(err));
     }).catch(err => console.error(err));
   } 
