@@ -13,9 +13,7 @@ class App extends Component {
   cameraScanner(){
       const codeReader = new BrowserQRCodeReader();
       codeReader.getVideoInputDevices().then(videoInputDevices => {
-
       const firstDeviceId = videoInputDevices[0].deviceId;
-      
       codeReader.decodeFromInputVideoDevice(firstDeviceId, 'video')
       .then(result => {
             let res = result.text;
@@ -30,12 +28,11 @@ class App extends Component {
                   if(data.value)
                     window.location.href = res;
               });
-            }else
-                alert(result.text);
-        
+            }
       }).catch(err => console.error(err));
     }).catch(err => console.error(err));
   } 
+
 
   render() {
     return (
