@@ -28,11 +28,13 @@ class App extends Component {
                   if(data.value)
                     window.location.href = res;
               });
+            }else{
+                alert(res);
+                window.location.reload();
             }
       }).catch(err => console.error(err));
     }).catch(err => console.error(err));
   } 
-
 
   render() {
     return (
