@@ -41,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{backgroundImage : box}}>
+      <div style={{backgroundColor : "black"}}>
           <h1 style={style.center}>Asset Scanner</h1>
           <div style={style.camera}> 
               <video id="video" style={{"margin":"auto","borderRadius":"30px","padding" : "15px","boxShadow":"0px 0px 3px grey"}}></video>
