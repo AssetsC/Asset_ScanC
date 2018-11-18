@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserQRCodeReader} from '@zxing/library';
 import swal from 'sweetalert2';
 
+import box from './box.png';
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -39,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div >
+      <div style={{backgroundImage : box}}>
           <h1 style={style.center}>Asset Scanner</h1>
           <div style={style.camera}> 
               <video id="video" style={{"margin":"auto","borderRadius":"30px","padding" : "15px","boxShadow":"0px 0px 3px grey"}}></video>
