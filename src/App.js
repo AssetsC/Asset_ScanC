@@ -12,6 +12,7 @@ class App extends Component {
 
   cameraScanner(){
       const codeReader = new BrowserQRCodeReader();
+      
       codeReader.getVideoInputDevices().then(videoInputDevices => {
       const firstDeviceId = videoInputDevices[0].deviceId;
       codeReader.decodeFromInputVideoDevice(firstDeviceId, 'video')
@@ -38,7 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div >
           <h1 style={style.center}>Asset Scanner</h1>
           <div style={style.camera}> 
               <video id="video" style={{"margin":"auto","borderRadius":"30px","padding" : "15px","boxShadow":"0px 0px 3px grey"}}></video>
